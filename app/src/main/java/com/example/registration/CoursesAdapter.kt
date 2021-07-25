@@ -30,5 +30,5 @@ class CoursesViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
     var tvCourseName=itemView.findViewById<TextView>(R.id.tvcourseName)
     var tvDescription=itemView.findViewById<TextView>(R.id.tvDescription)
     var tvTrainer=itemView.findViewById<TextView>(R.id.tvtrainer)
-    var tvCode=itemView.findViewById<TextView>(R.id.tvcode)
+    var tvCode=itemView.findViewById<TextView>(R.id.textview)
 }

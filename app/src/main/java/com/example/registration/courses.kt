@@ -29,7 +29,7 @@ class courses : AppCompatActivity() {
                 "Purity Maina"),
             Course("123Design","UI/UX Design",
                 "Introduction to Adobe Design",
-                "Erick AsiagO")
+                "Erick Asiago")
         )
         var coursesAdapter= CoursesAdapter(courseList)
         rvCourses.layoutManager= LinearLayoutManager(baseContext)
