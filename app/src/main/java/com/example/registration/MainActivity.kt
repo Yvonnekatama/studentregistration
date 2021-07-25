@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.codehivereg.api.ApiInterface
+import com.example.registration.Api.ApiInterface
 import com.example.registration.Api.ApiClient
 import com.example.registration.models.RegistrationRequest
 import com.example.registration.models.RegistrationResponse

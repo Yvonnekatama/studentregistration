@@ -1,6 +1,6 @@
-package com.example.userregistration.models
+package com.example.registration.models
 
-import com.google.gson.annotations.SerializedName
+
 
 data class LogInRequest (
 

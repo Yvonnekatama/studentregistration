@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.codehivereg.api.ApiInterface
+import com.example.registration.Api.ApiInterface
 import com.example.registration.Api.ApiClient
-import com.example.userregistration.models.LogInRequest
-import com.example.userregistration.models.LoginResponse
+import com.example.registration.models.LogInRequest
+import com.example.registration.models.LoginResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -46,7 +46,7 @@ class Login : AppCompatActivity() {
                 email=email,  password=password
             )
             var client = ApiClient.buildApiClient(ApiInterface::class.java)
-            var request = client.loginStudent(loginRequest = loginRequest)
+            var request = client.loginStudent(loginRequest)
 
             request.enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(
