@@ -1,10 +1,10 @@
-package com.example.registration
+package com.example.registration.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.userregistration.Course
+import com.example.registration.R
 import com.example.userregistration.CoursesAdapter
 
 class courses : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.userregistration
+package com.example.registration.ui
 
 data class Course(
     var courseCode:String,
