@@ -18,8 +18,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
         binding.btnlogin.setOnClickListener {
 
             var intent = Intent(baseContext, Course::class.java)
@@ -29,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isEmpty()){
                 binding.etEmail.setError("Email required")
             }
-            var password = binding.etPassword        .text.toString()
+            var password = binding.etPassword.text.toString()
             if (password.isEmpty()){
                 binding.etPassword.setError("Password required")
             }
