@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.helloworld2.models.SessionManager
 import com.example.helloworld2.viewmodel.LoginViewModel
 import com.example.registration.databinding.ActivityLoginBinding
 import com.example.registration.models.LogInRequest
@@ -13,17 +12,12 @@ import com.example.registration.ui.Course
 
 
 class LoginActivity : AppCompatActivity() {
-
     lateinit var binding: ActivityLoginBinding
-    lateinit var sessionManager:SessionManager
-
     val loginViewModel: LoginViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        sessionManager = SessionManager(this)
 
 
         binding.btnlogin.setOnClickListener {
@@ -51,10 +45,6 @@ class LoginActivity : AppCompatActivity() {
         super.onResume()
         loginViewModel.loginLIveData.observe(this,{loginResponse ->
             Toast.makeText(baseContext,loginResponse.message,Toast.LENGTH_LONG).show()
-            var accessToken = loginResponse.accessToken
-            sessionManager.saveAccToken(accessToken)
-
-
 
         })
         loginViewModel.loginFailedLiveData.observe(this,{error->
