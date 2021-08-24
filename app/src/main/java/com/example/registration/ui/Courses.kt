@@ -1,14 +1,18 @@
 package com.example.registration.ui
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.registration.R
+import com.example.registration.viewmodel.EnrollingViewModel
 import com.example.userregistration.CoursesAdapter
 
 class courses : AppCompatActivity() {
     lateinit var rvCourses: RecyclerView
+    private lateinit var enrollViewModel: EnrollingViewModel
+    private lateinit var sharedPrefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
